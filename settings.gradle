@@ -1,2 +1,4 @@
-include ':app', ':core'
+include ':app', ':core', ':component-ui', ':business-login'
+project(':component-ui').projectDir = new File(rootProject.projectDir, './components/component-ui')
+project(':business-login').projectDir = new File(rootProject.projectDir, './businesses/business-login')
 rootProject.name='Architecture'
