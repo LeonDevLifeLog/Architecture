@@ -1,1 +1,5 @@
-<manifest package="com.github.leondevlifelog.core" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.github.leondevlifelog.core">
+
+    <application android:name=".App" />
+</manifest>
