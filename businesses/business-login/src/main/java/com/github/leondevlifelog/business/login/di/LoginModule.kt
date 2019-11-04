@@ -6,7 +6,7 @@ import dagger.Provides
 @Module
 class LoginModule {
     @Provides
-    fun privider(): String {
+    fun providerString(): String {
         return "hello login module"
     }
 }
