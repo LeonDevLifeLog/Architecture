@@ -6,9 +6,14 @@ import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
 import dagger.android.AndroidInjector
+import okhttp3.OkHttpClient
 
 @ForApplication
-@Component(modules = [AndroidInjectionModule::class, CoreModule::class])
+@Component(
+    modules = [AndroidInjectionModule::class, CoreModule::class,
+        NetworkComponent::class
+    ]
+)
 interface CoreComponent : AndroidInjector<CoreApp> {
     @Component.Factory
     interface Factory {
@@ -16,4 +21,5 @@ interface CoreComponent : AndroidInjector<CoreApp> {
     }
 
     fun sharedPreferences(): SharedPreferences
+    fun okHttpClient(): OkHttpClient
 }

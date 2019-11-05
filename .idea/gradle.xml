@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/businesses/business-login" />
+            <option value="$PROJECT_DIR$/businesses/business-splash" />
             <option value="$PROJECT_DIR$/components/component-ui" />
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/devtools/devtools-database" />
