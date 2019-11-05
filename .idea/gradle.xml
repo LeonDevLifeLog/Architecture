@@ -13,7 +13,7 @@
             <option value="$PROJECT_DIR$/businesses/business-splash" />
             <option value="$PROJECT_DIR$/components/component-ui" />
             <option value="$PROJECT_DIR$/core" />
-            <option value="$PROJECT_DIR$/devtools/devtools-database" />
+            <option value="$PROJECT_DIR$/devtools/devtool-database" />
             <option value="$PROJECT_DIR$/standalone/standalone-login" />
           </set>
         </option>
