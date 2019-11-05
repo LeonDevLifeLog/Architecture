@@ -20,6 +20,7 @@ interface CoreComponent : AndroidInjector<CoreApp> {
         fun create(@BindsInstance instance: CoreApp): CoreComponent
     }
 
+    fun providerCoreApp(): CoreApp
     fun sharedPreferences(): SharedPreferences
     fun okHttpClient(): OkHttpClient
 }
