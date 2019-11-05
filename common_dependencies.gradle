@@ -23,4 +23,6 @@ dependencies {
     implementation 'com.google.dagger:dagger-android-support:2.25.2'
     kapt 'com.google.dagger:dagger-android-processor:2.25.2'
     annotationProcessor 'com.google.dagger:dagger-android-processor:2.25.2'
+
+    debugImplementation project(path: ':devtools-database')
 }
