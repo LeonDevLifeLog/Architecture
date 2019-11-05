@@ -6,7 +6,10 @@ import com.github.leondevlifelog.core.di.ForActivity
 import dagger.Component
 
 @ForActivity
-@Component(modules = [LoginModule::class], dependencies = [CoreComponent::class])
+@Component(
+    modules = [LoginModule::class, ViewModelsModule::class],
+    dependencies = [CoreComponent::class]
+)
 interface LoginComponent {
     fun inject(loginActivity: LoginActivity)
 }

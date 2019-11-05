@@ -4,17 +4,20 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import com.github.leondevlifelog.business.login.di.DaggerLoginComponent
 import com.github.leondevlifelog.core.CoreApp
 import kotlinx.android.synthetic.main.activity_login.*
 import javax.inject.Inject
 
 class LoginActivity : AppCompatActivity() {
-
+    private lateinit var viewModel: LoginActivityViewModel
+    @Inject
+    lateinit var viewModelFactory: ViewModelProvider.Factory
     @set:Inject
     lateinit var sp: SharedPreferences
-    @set:Inject
-    lateinit var text: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         DaggerLoginComponent.builder()
@@ -22,7 +25,12 @@ class LoginActivity : AppCompatActivity() {
             .build().inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        tvTest.text = text
+        viewModel =
+            ViewModelProviders.of(this, viewModelFactory).get(LoginActivityViewModel::class.java)
+        viewModel.data.observe(this, Observer {
+            tvTest.text = it
+        })
+        viewModel.send()
         btnLogin.setOnClickListener {
             if (etUsername.text.isNotEmpty()) {
                 sp.edit().putString("USER_NAME", etUsername.text.toString()).apply()
