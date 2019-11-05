@@ -10,7 +10,7 @@ class CoreApp : DaggerApplication(), CoreComponentProvider {
     private lateinit var coreComponent: CoreComponent
 
     override fun onCreate() {
-        coreComponent = DaggerCoreComponent.factory().create(this) as CoreComponent
+        coreComponent = DaggerCoreComponent.factory().create(this)
         super.onCreate()
     }
 
