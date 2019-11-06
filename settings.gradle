@@ -1,4 +1,4 @@
-include ':app', ':core', ':component-ui', ':business-login', ':standalone-login', ':devtool-database', ':business-splash'
+include ':app', ':core', ':component-ui', ':business-login', ':standalone-login', ':devtool-database', ':business-splash', ':router'
 project(':component-ui').projectDir = new File(rootProject.projectDir, './components/component-ui')
 project(':business-login').projectDir = new File(rootProject.projectDir, './businesses/business-login')
 project(':business-splash').projectDir = new File(rootProject.projectDir, './businesses/business-splash')
