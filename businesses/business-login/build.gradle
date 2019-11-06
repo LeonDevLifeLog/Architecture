@@ -28,7 +28,6 @@ android {
 }
 
 dependencies {
-    implementation project(path: ':core')
 }
 apply from: "${rootDir}/common_dependencies.gradle"
 apply from: "${rootDir}/business_dependencies.gradle"

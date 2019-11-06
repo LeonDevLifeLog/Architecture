@@ -1,0 +1,21 @@
+apply plugin: 'java-library'
+apply plugin: 'maven'
+repositories {
+    google()
+    jcenter()
+    mavenLocal()
+}
+group "com.github.leondevlifelog"
+version "0.0.1"
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+sourceCompatibility = "8"
+targetCompatibility = "8"
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri("${project.rootDir.absolutePath}/repo"))
+        }
+    }
+}
