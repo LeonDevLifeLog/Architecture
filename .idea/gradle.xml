@@ -8,7 +8,6 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/annotation" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/businesses/business-login" />
             <option value="$PROJECT_DIR$/businesses/business-splash" />
@@ -16,7 +15,6 @@
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/devtools/devtool-database" />
             <option value="$PROJECT_DIR$/router" />
-            <option value="$PROJECT_DIR$/service-hub-plugin" />
             <option value="$PROJECT_DIR$/standalone/standalone-login" />
           </set>
         </option>
