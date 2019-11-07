@@ -1,4 +1,4 @@
-package com.github.leondevlifelog.devtool_default_service
+package com.github.leondevlifelog.service
 
 import com.github.leondevlifelog.router.splash.ISplashService
 import com.sankuai.waimai.router.annotation.RouterService
