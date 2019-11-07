@@ -1,4 +1,8 @@
 dependencies {
     implementation project(path: ':core')
     implementation project(path: ':router')
+
+    implementation 'com.sankuai.waimai.router:router:1.2.0'
+    kapt 'com.sankuai.waimai.router:compiler:1.2.0'
+    annotationProcessor 'com.sankuai.waimai.router:compiler:1.2.0'
 }

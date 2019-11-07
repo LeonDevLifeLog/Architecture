@@ -20,13 +20,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    compileOptions {
-        sourceCompatibility = 1.8
-        targetCompatibility = 1.8
-    }
-
 }
 
-dependencies {
-}
 apply from: "${rootDir}/common_dependencies.gradle"
+dependencies {
+    implementation 'com.sankuai.waimai.router:router:1.2.0'
+}

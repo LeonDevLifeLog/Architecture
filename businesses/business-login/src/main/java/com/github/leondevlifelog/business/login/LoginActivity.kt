@@ -1,5 +1,7 @@
 package com.github.leondevlifelog.business.login
 
+import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Toast
@@ -36,6 +38,12 @@ class LoginActivity : AppCompatActivity() {
                 sp.edit().putString("USER_NAME", etUsername.text.toString()).apply()
                 Toast.makeText(this, "登录成功", Toast.LENGTH_SHORT).show()
             }
+        }
+    }
+
+    companion object {
+        fun startMe(context: Context) {
+            context.startActivity(Intent(context, LoginActivity::class.java))
         }
     }
 }
