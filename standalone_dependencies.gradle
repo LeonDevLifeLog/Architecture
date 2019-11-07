@@ -1,5 +1,5 @@
 apply plugin: 'WMRouter'
 dependencies {
-    implementation project(path: ':router')
-    implementation project(path: ':devtool-default-service')
+    codeImplementation project(path: ':router')
+    codeImplementation project(path: ':devtool-default-service')
 }

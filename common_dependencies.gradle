@@ -6,6 +6,15 @@ android {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
     }
+    flavorDimensions "dependency"
+    productFlavors {
+        code {
+            dimension "dependency"
+        }
+        aar {
+            dimension "dependency"
+        }
+    }
 }
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -42,8 +51,6 @@ dependencies {
     kapt "androidx.room:room-compiler:2.2.1"
     implementation "androidx.room:room-ktx:2.2.1"
     testImplementation "androidx.room:room-testing:2.2.1"
-
-    debugImplementation project(path: ':devtool-database')
 
     implementation 'com.sankuai.waimai.router:router:1.2.0'
     kapt 'com.sankuai.waimai.router:compiler:1.2.0'

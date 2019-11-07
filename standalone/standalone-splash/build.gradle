@@ -25,9 +25,9 @@ android {
 
 }
 
-dependencies {
-    implementation project(path: ':business-splash')
-    implementation project(path: ':core')
-}
-apply from: "${rootDir}/standalone_dependencies.gradle"
 apply from: "${rootDir}/common_dependencies.gradle"
+apply from: "${rootDir}/standalone_dependencies.gradle"
+dependencies {
+    codeImplementation project(path: ':business-splash')
+    codeImplementation project(path: ':core')
+}

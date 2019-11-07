@@ -1,5 +1,5 @@
 dependencies {
-    implementation project(path: ':core')
-    implementation project(path: ':router')
+    codeImplementation project(path: ':core')
+    codeImplementation project(path: ':router')
 
 }

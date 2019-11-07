@@ -19,10 +19,10 @@ android {
     }
 }
 
-dependencies {
-    implementation project(path: ':core')
-    implementation project(path: ':business-splash')
-    implementation project(path: ':business-login')
-    implementation project(path: ':router')
-}
 apply from: "${rootDir}/common_dependencies.gradle"
+dependencies {
+    codeImplementation project(path: ':core')
+    codeImplementation project(path: ':business-splash')
+    codeImplementation project(path: ':business-login')
+    codeImplementation project(path: ':router')
+}

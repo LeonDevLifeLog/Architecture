@@ -22,9 +22,9 @@ android {
     }
 }
 
-dependencies {
-    implementation project(path: ':business-login')
-    implementation project(path: ':core')
-}
-apply from: "${rootDir}/standalone_dependencies.gradle"
 apply from: "${rootDir}/common_dependencies.gradle"
+apply from: "${rootDir}/standalone_dependencies.gradle"
+dependencies {
+    codeImplementation project(path: ':business-login')
+    codeImplementation project(path: ':core')
+}
