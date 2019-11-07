@@ -11,6 +11,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.github.leondevlifelog.business.login.di.DaggerLoginComponent
 import com.github.leondevlifelog.core.CoreApp
+import com.github.leondevlifelog.router.splash.ISplashService
+import com.sankuai.waimai.router.Router
 import kotlinx.android.synthetic.main.activity_login.*
 import javax.inject.Inject
 
@@ -39,6 +41,9 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "登录成功", Toast.LENGTH_SHORT).show()
             }
         }
+        val iSplashService: ISplashService? =
+            Router.getService(ISplashService::class.java, "default")
+        Toast.makeText(this, iSplashService?.test(), Toast.LENGTH_SHORT).show()
     }
 
     companion object {

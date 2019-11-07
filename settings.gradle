@@ -1,7 +1,8 @@
-include ':app', ':core', ':component-ui', ':business-login', ':standalone-login', ':devtool-database', ':business-splash', ':router'
+include ':app', ':core', ':component-ui', ':business-login', ':standalone-login', ':devtool-database', ':business-splash', ':router', ':devtool-default-service'
 project(':component-ui').projectDir = new File(rootProject.projectDir, './components/component-ui')
 project(':business-login').projectDir = new File(rootProject.projectDir, './businesses/business-login')
 project(':business-splash').projectDir = new File(rootProject.projectDir, './businesses/business-splash')
 project(':standalone-login').projectDir = new File(rootProject.projectDir, './standalone/standalone-login')
 project(':devtool-database').projectDir = new File(rootProject.projectDir, './devtools/devtool-database')
+project(':devtool-default-service').projectDir = new File(rootProject.projectDir, './devtools/devtool-default-service')
 rootProject.name='Architecture'

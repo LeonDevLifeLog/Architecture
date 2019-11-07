@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/components/component-ui" />
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/devtools/devtool-database" />
+            <option value="$PROJECT_DIR$/devtools/devtool-default-service" />
             <option value="$PROJECT_DIR$/router" />
             <option value="$PROJECT_DIR$/standalone/standalone-login" />
           </set>

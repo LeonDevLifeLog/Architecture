@@ -12,6 +12,6 @@ class LoginActivityViewModel @Inject constructor() : ViewModel() {
     lateinit var userDao: UserDao
     var data = MutableLiveData<String>()
     fun send(): Unit {
-        data.postValue(txt)
+        data.postValue("login module")
     }
 }

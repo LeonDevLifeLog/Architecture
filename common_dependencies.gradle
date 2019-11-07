@@ -44,4 +44,8 @@ dependencies {
     testImplementation "androidx.room:room-testing:2.2.1"
 
     debugImplementation project(path: ':devtool-database')
+
+    implementation 'com.sankuai.waimai.router:router:1.2.0'
+    kapt 'com.sankuai.waimai.router:compiler:1.2.0'
+    annotationProcessor 'com.sankuai.waimai.router:compiler:1.2.0'
 }

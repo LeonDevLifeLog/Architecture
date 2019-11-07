@@ -2,7 +2,7 @@ package com.github.leondevlifelog.business.login.service
 
 import android.content.Context
 import com.github.leondevlifelog.business.login.LoginActivity
-import com.github.leondevlifelog.router.ILoginService
+import com.github.leondevlifelog.router.login.ILoginService
 import com.sankuai.waimai.router.annotation.RouterService
 
 @RouterService(interfaces = [ILoginService::class], key = ["default"])
