@@ -33,6 +33,10 @@ dependencies {
     testImplementation 'androidx.test.ext:junit:1.1.1'
     testImplementation 'androidx.test:runner:1.2.0'
     testImplementation 'androidx.test:rules:1.2.0'
+    testImplementation("androidx.test.espresso:espresso-intents:3.2.0")
+    testImplementation("androidx.test.espresso:espresso-core:3.2.0")
+    testImplementation("androidx.test.ext:truth:1.2.0")
+    testImplementation "org.mockito:mockito-core:3.1.0"
 // Core library
     androidTestImplementation 'androidx.test:core:1.2.0'
 

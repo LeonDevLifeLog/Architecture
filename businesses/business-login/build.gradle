@@ -24,6 +24,7 @@ android {
 }
 
 dependencies {
+    testImplementation project(path:":devtool-default-service")
 }
 apply from: "${rootDir}/common_dependencies.gradle"
 apply from: "${rootDir}/business_dependencies.gradle"

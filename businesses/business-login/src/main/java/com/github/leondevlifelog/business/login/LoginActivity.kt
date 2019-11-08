@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -22,7 +23,7 @@ class LoginActivity : AppCompatActivity() {
     lateinit var viewModelFactory: ViewModelProvider.Factory
     @set:Inject
     lateinit var sp: SharedPreferences
-
+    val TAG: String = "LoginActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
         DaggerLoginComponent.builder()
             .coreComponent((application as CoreApp).providerCoreComponent())
@@ -41,6 +42,7 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "登录成功", Toast.LENGTH_SHORT).show()
             }
         }
+        Log.d(TAG, "onCreate: 准备获取ISplashService")
         val iSplashService: ISplashService? =
             Router.getService(ISplashService::class.java, "default")
         Toast.makeText(this, iSplashService?.test(), Toast.LENGTH_SHORT).show()
