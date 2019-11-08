@@ -7,6 +7,10 @@ import com.sankuai.waimai.router.annotation.RouterService
 
 @RouterService(interfaces = [ILoginService::class], key = ["default"])
 class ILoginServiceDefaultImpl : ILoginService {
+    override fun asyncTest(f: (String) -> Unit) {
+        f("这是默认实现的异步结果")
+    }
+
     override fun gotoLoginActivity(context: Context) {
         Toast.makeText(context, "这是mock，出现说明可以跳到登录页面", Toast.LENGTH_SHORT).show()
     }

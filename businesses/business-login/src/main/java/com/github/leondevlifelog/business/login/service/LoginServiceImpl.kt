@@ -7,6 +7,10 @@ import com.sankuai.waimai.router.annotation.RouterService
 
 @RouterService(interfaces = [ILoginService::class], key = ["default"])
 class LoginServiceImpl : ILoginService {
+    override fun asyncTest(f: (String) -> Unit) {
+        f("这是异步结果")
+    }
+
     override fun gotoLoginActivity(context: Context) {
         LoginActivity.startMe(context)
     }
