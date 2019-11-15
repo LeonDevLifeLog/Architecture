@@ -2,7 +2,9 @@ package com.github.leondevlifelog.business.splash
 
 import android.os.Bundle
 import android.widget.Toast
+import androidx.annotation.VisibleForTesting
 import androidx.appcompat.app.AppCompatActivity
+import com.github.leondevlifelog.business.splash.idlingresource.SimpleIdlingResource
 import com.github.leondevlifelog.router.login.ILoginService
 import com.sankuai.waimai.router.Router
 import kotlinx.coroutines.Dispatchers
@@ -11,6 +13,9 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class SplashActivity : AppCompatActivity() {
+    @get:VisibleForTesting
+    val simpleIdlingResource: SimpleIdlingResource = SimpleIdlingResource()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
@@ -23,6 +28,7 @@ class SplashActivity : AppCompatActivity() {
             delay(2000)
             iLoginService?.asyncTest {
                 Toast.makeText(this@SplashActivity, it, Toast.LENGTH_SHORT).show()
+                simpleIdlingResource.setIdleState(true)
             }
         }
     }
